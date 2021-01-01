@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "12.18.2"
+install:
+  - "npm install"
+  - "gem install scss-lint"
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+script:
+  - "gulp build"
